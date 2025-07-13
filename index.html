@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- मेटा टैग्स (लिंक प्रीव्यू के लिए) -->
+    <title>शुभ दीपावली</title>
+    <meta name="description" content="आपके किसी प्रियजन ने दीपावली की विशेष शुभकामनाएँ भेजी हैं।">
+    <meta property="og:title" content="✨ शुभ दीपावली की शुभकामनाएँ! ✨">
+    <meta property="og:description" content="आपके किसी प्रियजन ने एक विशेष संदेश भेजा है। देखने के लिए क्लिक करें।">
+    <meta property="og:image" content="https://akushre.github.io/Diwali-wishes/lakshmi.gif">
+    <meta property="og:url" content="https://akushre.github.io/Diwali-wishes/">
+    <meta property="og:type" content="website">
+
+    <!-- ================== 1. गूगल एडसेंस का मुख्य कोड यहाँ लगा दिया गया है ================== -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4381115056564434"
+     crossorigin="anonymous"></script>
+    <!-- =================================================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold-color: #FFD700;
+            --deep-purple: #240046;
+            --night-sky: #020024;
+        }
+
+        body {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            overflow: hidden;
+            color: white;
+            background: radial-gradient(ellipse at bottom, var(--deep-purple), var(--night-sky));
+            padding-bottom: 75px; 
+        }
+
+        .container {
+            padding: 25px; border-radius: 20px; background: rgba(14, 2, 34, 0.4);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5); backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px); border: 3px solid;
+            border-image-slice: 1; border-image-source: linear-gradient(to bottom right, var(--gold-color), #c08401);
+            max-width: 90%; width: 400px; position: relative; z-index: 10;
+        }
+        
+        #generator-view, #receiver-view { width: 100%; }
+        #om-symbol { font-size: 2.5em; color: var(--gold-color); margin-bottom: 10px; animation: pulse-glow 3s ease-in-out infinite; }
+        @keyframes pulse-glow { 50% { transform: scale(1.1); text-shadow: 0 0 25px var(--gold-color); } }
+        #lakshmi-photo { max-width: 170px; border-radius: 50%; margin-bottom: 20px; border: 3px solid var(--gold-color); box-shadow: 0 0 20px #ffeb3b, 0 0 35px #ffc107; }
+        .main-greeting, .receiver-greeting { font-size: 2.8em; font-weight: bold; color: var(--gold-color); animation: text-flicker 3s ease-in-out infinite alternate; }
+        @keyframes text-flicker { from { text-shadow: 0 0 10px #fff, 0 0 15px var(--gold-color); } to { text-shadow: 0 0 15px #fff, 0 0 25px #ffac00, 0 0 35px #ff4500; } }
+        #sender-name-display { font-size: 1.8em; color: #ffc107; margin-top: 5px; animation: fadeIn 3s both; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        #name-input-section { margin-top: 25px; }
+        #name-input { padding: 12px; width: calc(100% - 28px); border-radius: 8px; border: 1px solid var(--gold-color); margin-bottom: 20px; font-size: 1.1em; font-family: inherit; background-color: rgba(255,255,255,0.1); color: white; text-align: center; }
+        #name-input::placeholder { color: rgba(255, 255, 255, 0.7); }
+        .action-button { padding: 14px 30px; border-radius: 50px; border: none; color: white; font-size: 1.2em; font-family: inherit; font-weight: bold; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; display: block; width: 100%; box-sizing: border-box; }
+        .share-button { background: linear-gradient(45deg, #25D366, #128C7E); }
+        .create-new-button { background: linear-gradient(45deg, #ff8c00, #c08401); margin-top: 20px; }
+        .action-button:hover { transform: scale(1.05); box-shadow: 0 0 20px #fff; }
+        .sparkle { position: absolute; bottom: -50px; background-color: var(--gold-color); border-radius: 50%; animation: float-up linear infinite; z-index: -1; opacity: 0; }
+        @keyframes float-up { 100% { transform: translateY(-100vh); opacity: 0; } }
+        .firework-rocket { position: absolute; width: 4px; height: 40px; background: linear-gradient(to top, #ffc107, transparent); bottom: 0; opacity: 0; animation: shoot-up 1.5s ease-out; }
+        @keyframes shoot-up { to { transform: translateY(-80vh); opacity: 0; } }
+        .particle { position: absolute; width: 6px; height: 6px; background-color: var(--gold-color); border-radius: 50%; animation: explode 1s ease-out forwards; }
+        @keyframes explode { 100% { transform: var(--transform-end) scale(0); opacity: 0; } }
+        #sound-toggle { position: fixed; top: 15px; right: 15px; background: rgba(255,255,255,0.2); border: 1px solid var(--gold-color); color: white; padding: 8px 12px; border-radius: 50px; cursor: pointer; z-index: 20; display: none; }
+
+        /* विज्ञापन बार के लिए CSS */
+        #ad-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            text-align: center;
+            z-index: 2000;
+            padding: 5px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 60px; /* विज्ञापन के लिए न्यूनतम ऊंचाई */
+        }
+    </style>
+</head>
+<body>
+    
+    <audio id="mantra-audio" src="mantra.mp3" loop></audio>
+    <button id="sound-toggle" onclick="toggleSound()">🔊 संगीत</button>
+    
+    <div class="container">
+        <div id="generator-view">
+            <div id="om-symbol">ॐ</div>
+            <img id="lakshmi-photo" src="lakshmi.gif" alt="लक्ष्मी जी की तस्वीर">
+            <h1 class="main-greeting">दीपावली की हार्दिक शुभकामनाएँ</h1>
+            <div id="name-input-section">
+                <input type="text" id="name-input" placeholder="यहाँ अपना नाम लिखें...">
+                <button class="action-button share-button" onclick="generateAndShare()">व्हाट्सएप पर शेयर करें</button>
+            </div>
+        </div>
+        <div id="receiver-view" style="display: none;">
+             <h1 class="receiver-greeting">शुभ दीपावली</h1>
+             <p id="sender-name-display"></p>
+             <button class="action-button create-new-button" onclick="resetToGenerator()">आप भी अपनी शुभकामनाएँ बनाएँ</button>
+        </div>
+    </div>
+
+    <!-- ================== 2. विज्ञापन यूनिट का कोड यहाँ लगा दिया गया है ================== -->
+    <div id="ad-bar">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-format="fluid"
+             data-ad-layout-key="-ef+6k-30-ac+ty"
+             data-ad-client="ca-pub-4381115056564434"
+             data-ad-slot="4973266637"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    <!-- =================================================================================== -->
+
+    <script>
+        // सभी जावास्क्रिप्ट फंक्शन पहले जैसे ही रहेंगे
+        window.onload=function(){createSparkles(30);const e=new URLSearchParams(window.location.search).get("name");if(e){document.getElementById("generator-view").style.display="none",document.getElementById("receiver-view").style.display="block",document.getElementById("sender-name-display").textContent="आपके लिए "+decodeURIComponent(e)+" की ओर से",document.getElementById("sound-toggle").style.display="block",startFirecrackers()}};function resetToGenerator(){window.history.pushState({},document.title,window.location.pathname),document.getElementById("receiver-view").style.display="none",document.getElementById("generator-view").style.display="block",stopFirecrackers(),document.getElementById("sound-toggle").style.display="none";const e=document.getElementById("mantra-audio");e.pause()}let firecrackerInterval;function startFirecrackers(){firecrackerInterval=setInterval(createFireworkRocket,800)}function stopFirecrackers(){clearInterval(firecrackerInterval)}function generateAndShare(){const e=document.getElementById("name-input").value.trim();if(""===e)return void alert("कृपया अपना नाम अवश्य लिखें!");const o=window.location.href.split("?")[0]+"?name="+encodeURIComponent(e),t=encodeURIComponent(`🪔✨ *${e}* की ओर से आपको और आपके परिवार को दीपावली की हार्दिक शुभकामनाएँ! ✨🪔\n\nमेरी शुभकामनाएँ देखने के लिए नीचे दिए गए लिंक पर क्लिक करें:\n\n${o}`);/Mobi|Android/i.test(navigator.userAgent)?window.location.href=`whatsapp://send?text=${t}`:navigator.clipboard.writeText(o).then(()=>alert("शुभकामना लिंक कॉपी हो गया है! अब आप इसे कहीं भी शेयर कर सकते हैं।"))}function toggleSound(){const e=document.getElementById("mantra-audio"),o=document.getElementById("sound-toggle");e.paused?(e.play().catch(e=>console.log(e)),o.textContent="🔇 संगीत बंद"):(e.pause(),o.textContent="🔊 संगीत चालू")}function createSparkles(e){const o=document.querySelector("body");for(let t=0;t<e;t++){const e=document.createElement("div");e.className="sparkle";const c=2*Math.random()+1;e.style.width=`${c}px`,e.style.height=`${c}px`,e.style.left=`${100*Math.random()}%`,e.style.animationDuration=`${10*Math.random()+10}s`,e.style.animationDelay=`${10*Math.random()}s`,o.appendChild(e)}}function createFireworkRocket(){const e=document.createElement("div");e.className="firework-rocket";const o=Math.random()*window.innerWidth;e.style.left=`${o}px`,document.body.appendChild(e),e.addEventListener("animationend",()=>{createExplosion(o,.2*window.innerHeight),e.remove()})}function createExplosion(e,o){for(let t=0;t<50;t++){const c=document.createElement("div");c.className="particle",c.style.left=`${e}px`,c.style.top=`${o}px`;const n=360*Math.random(),d=150*Math.random()+50,a=Math.cos(n*Math.PI/180)*d,i=Math.sin(n*Math.PI/180)*d;c.style.setProperty("--transform-end",`translate(${a}px, ${i}px)`),c.style.backgroundColor=`hsl(${50*Math.random()+10}, 100%, 70%)`,document.body.appendChild(c),setTimeout(()=>c.remove(),1e3)}}
+    </script>
+</body>
+</html>
